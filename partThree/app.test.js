@@ -43,6 +43,71 @@ test(`calculateGameResults returns the correct string when playerMove is 'rock' 
   expect(actual).toBe(expected);
 });
 
+test(`calculateGameResults returns the correct string when playerMove is 'rock' and computerMove is 'scissors'`, () => {
+  let playerMove = "rock";
+  let computerMove = "scissors";
+  let actual = calculateGameResult(playerMove, computerMove);
+  let expected = `Player chose rock and computer chose scissors. Player wins.`;
+  expect(actual).toBe(expected);
+});
+
+test(`calculateGameResults returns the correct string when playerMove is 'rock' and computerMove is 'rock'`, () => {
+  let playerMove = "rock";
+  let computerMove = "rock";
+  let actual = calculateGameResult(playerMove, computerMove);
+  let expected = `Both players chose rock. It's a draw.`;
+  expect(actual).toBe(expected);
+});
+
+
+test(`calculateGameResults returns the correct string when playerMove is 'paper' and computerMove is 'scissors'`, () => {
+  let playerMove = "paper";
+  let computerMove = "scissors";
+  let actual = calculateGameResult(playerMove, computerMove);
+  let expected = `Player chose paper and computer chose scissors. Computer wins.`;
+  expect(actual).toBe(expected);
+});
+
+test(`calculateGameResults returns the correct string when playerMove is 'paper' and computerMove is 'rock'`, () => {
+  let playerMove = "paper";
+  let computerMove = "rock";
+  let actual = calculateGameResult(playerMove, computerMove);
+  let expected = `Player chose paper and computer chose rock. Player wins.`;
+  expect(actual).toBe(expected);
+});
+
+test(`calculateGameResults returns the correct string when playerMove is 'paper' and computerMove is 'paper'`, () => {
+  let playerMove = "paper";
+  let computerMove = "paper";
+  let actual = calculateGameResult(playerMove, computerMove);
+  let expected = `Both players chose paper. It's a draw.`;
+  expect(actual).toBe(expected);
+});
+
+test(`calculateGameResults returns the correct string when playerMove is 'scissors' and computerMove is 'rock'`, () => {
+  let playerMove = "scissors";
+  let computerMove = "rock";
+  let actual = calculateGameResult(playerMove, computerMove);
+  let expected = `Player chose scissors and computer chose rock. Computer wins.`;
+  expect(actual).toBe(expected);
+});
+
+test(`calculateGameResults returns the correct string when playerMove is 'scissors' and computerMove is 'paper'`, () => {
+  let playerMove = "scissors";
+  let computerMove = "paper";
+  let actual = calculateGameResult(playerMove, computerMove);
+  let expected = `Player chose scissors and computer chose paper. Player wins.`;
+  expect(actual).toBe(expected);
+});
+
+test(`calculateGameResults returns the correct string when playerMove is 'scissors' and computerMove is 'scissors'`, () => {
+  let playerMove = "scissors";
+  let computerMove = "paper";
+  let actual = calculateGameResult(playerMove, computerMove);
+  let expected = `Both players chose scissors. It's a draw.`;
+  expect(actual).toBe(expected);
+});
+
 /* 
 
 Task 2 - Test generateComputerMove
