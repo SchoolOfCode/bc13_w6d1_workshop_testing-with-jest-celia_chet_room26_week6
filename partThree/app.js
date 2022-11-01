@@ -11,7 +11,7 @@ export function calculateGameResult(playerMove, computerMove) {
     incrementScore('draw', currentScores);
     return `Both players chose rock. It's a draw.`;
   }
-  if (playerMove === 'rock' && computerMove === '') {
+  if (playerMove === 'rock' && computerMove === 'paper') {
     incrementScore('computer', currentScores);
     return `Player chose rock and computer chose paper. Computer wins.`;
   }
