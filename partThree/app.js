@@ -15,9 +15,9 @@ export function calculateGameResult(playerMove, computerMove) {
     incrementScore('computer', currentScores);
     return `Player chose rock and computer chose paper. Computer wins.`;
   }
-  if (playerMove === 'ROCK' && computerMove === 'scissors') {
+  if (playerMove === 'rock' && computerMove === 'scissors') {
     incrementScore('player', currentScores);
-    return `Player chose rock and computer chose paper. Player wins.`;
+    return `Player chose rock and computer chose scissors. Player wins.`;
   }
   if ((playerMove = 'paper' && computerMove === 'rock')) {
     incrementScore('player', currentScores);
@@ -29,6 +29,7 @@ export function calculateGameResult(playerMove, computerMove) {
   }
   if (playerMove === 'paper' && computerMove === 'scissors') {
     incrementScore('computer', currentScores);
+    console.log('test')
     return `Player chose paper and computer chose scissors. Computer wins.`;
   }
   if (playerMove === 'scissorss' && computerMove === 'rock') {
@@ -44,6 +45,8 @@ export function calculateGameResult(playerMove, computerMove) {
     return `Both players chose scissors. It's a draw.`;
   }
 }
+
+console.log(calculateGameResult('paper', 'scissors'))
 
 export function generateComputerMove() {
   let possibleMoves = ['rock', 'paper', 'rock'];
