@@ -102,7 +102,7 @@ test(`calculateGameResults returns the correct string when playerMove is 'scisso
 
 test(`calculateGameResults returns the correct string when playerMove is 'scissors' and computerMove is 'scissors'`, () => {
   let playerMove = "scissors";
-  let computerMove = "paper";
+  let computerMove = "scissors";
   let actual = calculateGameResult(playerMove, computerMove);
   let expected = `Both players chose scissors. It's a draw.`;
   expect(actual).toBe(expected);
