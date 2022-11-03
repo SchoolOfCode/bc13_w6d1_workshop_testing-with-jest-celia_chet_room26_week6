@@ -40,3 +40,9 @@ test(`When given a boolean instead of a string, the greetPerson function returns
 });
 
 //👉 2.2 - Write your tests for the other functions below:
+
+test('test if 5 * 2 + 1 returns 11', () => {
+    const actual = doubleAndAddOne(5)
+    const expected = 11
+    expect(actual).toBe(expected)
+} )

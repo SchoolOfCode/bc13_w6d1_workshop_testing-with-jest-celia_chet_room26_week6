@@ -7,43 +7,51 @@ const currentScores = {
 };
 
 export function calculateGameResult(playerMove, computerMove) {
+  
   if (playerMove === 'rock' && computerMove === 'rock') {
     incrementScore('draw', currentScores);
     return `Both players chose rock. It's a draw.`;
   }
-  if (playerMove === 'rock' && computerMove === '') {
+  if (playerMove === 'rock' && computerMove === 'paper') {
     incrementScore('computer', currentScores);
     return `Player chose rock and computer chose paper. Computer wins.`;
   }
-  if (playerMove === 'ROCK' && computerMove === 'scissors') {
+  if (playerMove === 'rock' && computerMove === 'scissors') {
     incrementScore('player', currentScores);
-    return `Player chose rock and computer chose paper. Player wins.`;
+    return `Player chose rock and computer chose scissors. Player wins.`;
   }
-  if ((playerMove = 'paper' && computerMove === 'rock')) {
+  if (playerMove === 'paper' && computerMove === 'rock') {
     incrementScore('player', currentScores);
     return `Player chose paper and computer chose rock. Player wins.`;
   }
   if (playerMove === 'paper' && computerMove === 'paper') {
     incrementScore('draw', currentScores);
-    return `Both players chose scissors. It's a draw.`;
+    return `Both players chose paper. It's a draw.`;
   }
+ 
   if (playerMove === 'paper' && computerMove === 'scissors') {
     incrementScore('computer', currentScores);
     return `Player chose paper and computer chose scissors. Computer wins.`;
   }
-  if (playerMove === 'scissorss' && computerMove === 'rock') {
+
+  if (playerMove === 'scissors' && computerMove === 'rock') {
     incrementScore('computer', currentScores);
     return `Player chose scissors and computer chose rock. Computer wins.`;
   }
+  console.log(playerMove)
+  console.log(computerMove)
   if (playerMove === 'scissors' && computerMove === 'paper') {
     incrementScore('player', currentScores);
-    return `Player chose paper and computer chose paper. Player wins.`;
+    return `Player chose scissors and computer chose paper. Player wins.`;
   }
-  if (playerMove === 'scissors' && computerMove === 'rock') {
-    incrementScore('draw', currentScores);
+  if (playerMove === 'scissors' && computerMove === 'scissors') {
+    incrementScore('computer', currentScores);
     return `Both players chose scissors. It's a draw.`;
   }
+  
 }
+
+console.log(calculateGameResult('paper', 'scissors'))
 
 export function generateComputerMove() {
   let possibleMoves = ['rock', 'paper', 'rock'];
