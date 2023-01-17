@@ -46,3 +46,17 @@ test('test if 5 * 2 + 1 returns 11', () => {
     const expected = 11
     expect(actual).toBe(expected)
 } )
+
+let myArray = [
+  1, 2 , 3, 4, 5, 6, 7
+]
+
+test('if item added to array', () => {
+    let actual = addItemToArray(myArray, 8)
+    let lastItemIndex = actual.length - 1
+    expect(actual[lastItemIndex]).toBe(8)
+
+  //   let lastItemIndex = actual.length-1
+  //  let thingy = actual[lastItemIndex]
+})
+
